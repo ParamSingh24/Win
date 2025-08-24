@@ -2,90 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 /* EcoSync Nexus Design System - Accessibility-First Energy Management */
 
 @layer base {
   :root {
-    /* Core brand colors - warm, trustworthy palette */
-    --primary: 210 85% 25%;          /* Deep ocean blue */
-    --primary-light: 210 75% 35%;    /* Lighter blue for hover states */
-    --primary-foreground: 0 0% 98%;  /* Clean white text */
+    /* Cyberpunk Core Colors - Electric Blues & Deep Blacks */
+    --primary: 200 100% 60%;         /* Electric cyan blue */
+    --primary-light: 200 100% 70%;   /* Brighter cyan for hover */
+    --primary-foreground: 0 0% 0%;   /* Pure black text */
     
-    /* Secondary colors - calming greens */
-    --secondary: 142 65% 45%;        /* Forest green for success/energy */
-    --secondary-light: 142 55% 55%;  /* Lighter green */
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary colors - Neon accents */
+    --secondary: 240 100% 70%;       /* Electric purple-blue */
+    --secondary-light: 240 100% 80%; /* Lighter purple-blue */
+    --secondary-foreground: 0 0% 0%;
     
-    /* Accent colors - warm earth tones */
-    --accent: 35 85% 55%;            /* Warm amber for alerts/actions */
-    --accent-light: 35 75% 65%;
-    --accent-foreground: 0 0% 15%;
+    /* Accent colors - Neon highlights */
+    --accent: 180 100% 50%;          /* Bright cyan accent */
+    --accent-light: 180 100% 60%;
+    --accent-foreground: 0 0% 0%;
     
-    /* Background system */
-    --background: 210 20% 98%;       /* Soft blue-white */
-    --background-secondary: 210 15% 95%; /* Slightly deeper for cards */
-    --foreground: 220 15% 15%;       /* Warm dark gray */
+    /* Background system - Dark cyberpunk */
+    --background: 220 20% 8%;        /* Deep dark blue-black */
+    --background-secondary: 220 25% 12%; /* Slightly lighter for depth */
+    --foreground: 200 100% 85%;      /* Bright cyan text */
     
-    /* Card system */
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
-    --card-border: 210 25% 90%;
+    /* Card system - Dark with neon borders */
+    --card: 220 25% 10%;
+    --card-foreground: 200 100% 85%;
+    --card-border: 200 100% 40%;
     
-    /* Status colors */
-    --success: 142 65% 45%;          /* Matching secondary green */
-    --warning: 35 85% 55%;           /* Matching accent amber */
-    --danger: 0 75% 60%;             /* Soft red for emergencies */
-    --info: 210 85% 25%;             /* Matching primary blue */
+    /* Status colors - Cyberpunk palette */
+    --success: 120 100% 50%;         /* Neon green */
+    --warning: 60 100% 50%;          /* Electric yellow */
+    --danger: 0 100% 60%;            /* Neon red */
+    --info: 200 100% 60%;            /* Electric cyan */
     
     /* Interactive states */
-    --muted: 210 15% 92%;
-    --muted-foreground: 220 10% 45%;
-    --border: 210 25% 88%;
-    --input: 210 20% 96%;
-    --ring: 210 85% 25%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 200 50% 60%;
+    --border: 200 100% 30%;
+    --input: 220 25% 12%;
+    --ring: 200 100% 60%;
     
     /* Accessibility helpers */
-    --focus-ring: 210 85% 25%;
+    --focus-ring: 200 100% 60%;
     --high-contrast-bg: 0 0% 0%;
     --high-contrast-fg: 0 0% 100%;
     
-    /* Energy visualization colors */
-    --energy-low: 142 65% 45%;       /* Green for efficient */
-    --energy-medium: 35 85% 55%;     /* Amber for moderate */
-    --energy-high: 0 75% 60%;        /* Red for high usage */
+    /* Energy visualization colors - Cyberpunk style */
+    --energy-low: 120 100% 50%;      /* Neon green for efficient */
+    --energy-medium: 60 100% 50%;    /* Electric yellow for moderate */
+    --energy-high: 0 100% 60%;       /* Neon red for high usage */
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 85% 25%), hsl(210 75% 35%));
-    --gradient-secondary: linear-gradient(135deg, hsl(142 65% 45%), hsl(142 55% 55%));
-    --gradient-energy: linear-gradient(90deg, hsl(142 65% 45%), hsl(35 85% 55%), hsl(0 75% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 20% 98%), hsl(210 15% 95%));
+    /* Cyberpunk Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 60%), hsl(240 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(240 100% 70%), hsl(280 100% 60%));
+    --gradient-energy: linear-gradient(90deg, hsl(120 100% 50%), hsl(60 100% 50%), hsl(0 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 8%), hsl(220 25% 12%));
+    --gradient-cyberpunk: linear-gradient(45deg, hsl(200 100% 60%), hsl(240 100% 70%), hsl(280 100% 60%));
     
     /* Animation timing */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glow: all 0.3s ease-in-out;
     
     /* Spacing system for accessibility */
-    --touch-target: 44px;            /* Minimum touch target size */
-    --space-comfortable: 1.5rem;     /* Comfortable spacing */
+    --touch-target: 44px;
+    --space-comfortable: 1.5rem;
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar - Cyberpunk theme */
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 200 100% 85%;
+    --sidebar-primary: 200 100% 60%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 200 100% 85%;
+    --sidebar-border: 200 100% 30%;
+    --sidebar-ring: 200 100% 60%;
   }
 
   /* High contrast mode for accessibility */
@@ -108,8 +104,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-rajdhani;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.1) 0%, transparent 50%);
   }
   
   /* Accessibility font sizing */
@@ -130,37 +129,77 @@
 }
 
 @layer components {
-  /* Voice wave animation */
+  /* Cyberpunk Voice wave animation */
   .voice-wave {
     @apply relative overflow-hidden;
   }
   
   .voice-wave::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/30 to-primary/20;
+    @apply absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/50 to-primary/30;
     animation: wave 2s ease-in-out infinite;
+    filter: blur(1px);
   }
   
-  /* Energy flow animation */
+  /* Cyberpunk Energy flow animation */
   .energy-flow {
     background: var(--gradient-energy);
     background-size: 300% 100%;
     animation: energyFlow 3s ease-in-out infinite;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
   }
   
-  /* Pulse animation for savings counter */
+  /* Cyberpunk pulse animation */
   .savings-pulse {
     animation: savingsPulse 2s ease-in-out infinite;
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.4);
   }
   
-  /* Gentle hover effects for elderly users */
+  /* Cyberpunk hover effects with neon glow */
   .gentle-hover {
-    transition: var(--transition-smooth);
+    transition: var(--transition-glow);
+    border: 1px solid hsl(var(--border));
   }
   
   .gentle-hover:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px -8px hsl(var(--primary) / 0.3);
+    box-shadow: 
+      0 8px 25px -8px hsl(var(--primary) / 0.4),
+      0 0 20px hsl(var(--primary) / 0.3),
+      inset 0 1px 0 hsl(var(--primary) / 0.2);
+    border-color: hsl(var(--primary) / 0.6);
+  }
+  
+  /* Neon glow effect */
+  .neon-glow {
+    box-shadow: 
+      0 0 5px hsl(var(--primary) / 0.5),
+      0 0 10px hsl(var(--primary) / 0.4),
+      0 0 15px hsl(var(--primary) / 0.3);
+  }
+  
+  /* Cyberpunk button glow */
+  .cyber-button {
+    position: relative;
+    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)));
+    border: 1px solid hsl(var(--primary));
+    transition: var(--transition-glow);
+  }
+  
+  .cyber-button:hover {
+    box-shadow: 
+      0 0 10px hsl(var(--primary) / 0.6),
+      0 0 20px hsl(var(--primary) / 0.4),
+      0 0 30px hsl(var(--primary) / 0.2);
+    transform: translateY(-1px);
+  }
+  
+  /* Cyberpunk text glow */
+  .text-glow {
+    text-shadow: 
+      0 0 5px hsl(var(--primary) / 0.8),
+      0 0 10px hsl(var(--primary) / 0.6),
+      0 0 15px hsl(var(--primary) / 0.4);
   }
   
   /* Large touch targets */
@@ -168,10 +207,35 @@
     min-height: var(--touch-target);
     min-width: var(--touch-target);
   }
+  
+  /* Cyberpunk grid pattern background */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  /* Scanning line effect */
+  .scan-line {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scan-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    animation: scanLine 3s linear infinite;
+  }
 }
 
 @layer utilities {
-  /* Custom animations */
+  /* Cyberpunk animations */
   @keyframes wave {
     0%, 100% { transform: translateX(-100%); }
     50% { transform: translateX(100%); }
@@ -187,10 +251,12 @@
     0%, 100% { 
       transform: scale(1);
       opacity: 1;
+      box-shadow: 0 0 15px hsl(var(--primary) / 0.4);
     }
     50% { 
       transform: scale(1.05);
       opacity: 0.9;
+      box-shadow: 0 0 25px hsl(var(--primary) / 0.6);
     }
   }
   
@@ -202,6 +268,57 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  
+  @keyframes scanLine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+  
+  @keyframes neonFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  @keyframes cyberGlow {
+    0%, 100% {
+      box-shadow: 
+        0 0 5px hsl(var(--primary) / 0.5),
+        0 0 10px hsl(var(--primary) / 0.4),
+        0 0 15px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 
+        0 0 10px hsl(var(--primary) / 0.7),
+        0 0 20px hsl(var(--primary) / 0.6),
+        0 0 30px hsl(var(--primary) / 0.5);
+    }
+  }
+  
+  @keyframes dataStream {
+    0% { transform: translateY(-100%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+  
+  @keyframes hologram {
+    0%, 100% { 
+      transform: translateY(0px);
+      filter: hue-rotate(0deg);
+    }
+    25% { 
+      transform: translateY(-2px);
+      filter: hue-rotate(90deg);
+    }
+    50% { 
+      transform: translateY(0px);
+      filter: hue-rotate(180deg);
+    }
+    75% { 
+      transform: translateY(2px);
+      filter: hue-rotate(270deg);
     }
   }
   

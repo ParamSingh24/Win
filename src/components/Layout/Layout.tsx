@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Navigation from './Navigation';
+import CyberpunkBackground from '../CyberpunkBackground';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,7 +12,8 @@ const Layout = ({ children }: LayoutProps) => {
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
   return (
-    <div className={`min-h-screen ${isHighContrast ? 'high-contrast' : ''} ${isLargeText ? 'text-large' : ''}`}>
+    <div className={`min-h-screen relative ${isHighContrast ? 'high-contrast' : ''} ${isLargeText ? 'text-large' : ''}`}>
+      <CyberpunkBackground />
       <Navigation
         isLargeText={isLargeText}
         isHighContrast={isHighContrast}
@@ -20,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
         onToggleHighContrast={() => setIsHighContrast(!isHighContrast)}
         onLanguageChange={setCurrentLanguage}
       />
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         {children}
       </main>
     </div>

@@ -60,25 +60,25 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-20">
-        <div className="container mx-auto px-6 text-center">
+      <section className="bg-gradient-hero py-20 cyber-grid relative overflow-hidden">
+        <div className="container mx-auto px-6 text-center relative z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-5xl lg:text-6xl font-bold text-primary mb-6 font-poppins">
+            <h1 className="text-5xl lg:text-6xl font-bold text-primary mb-6 font-orbitron text-glow animate-hologram">
               Your AI Energy Butler
             </h1>
-            <p className="text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-2xl text-foreground mb-8 max-w-3xl mx-auto">
               Save Money, Stay Safe, Stay Connected - An accessible energy management system designed for elderly and specially-abled users
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/dashboard">
-                <Button variant="default" size="xl" className="text-lg px-8">
+                <Button variant="default" size="xl" className="text-lg px-8 cyber-button neon-glow animate-cyber-glow">
                   <Zap className="h-6 w-6 mr-2" />
                   Try Demo
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
               <Link to="/voice">
-                <Button variant="voice" size="xl" className="text-lg px-8">
+                <Button variant="secondary" size="xl" className="text-lg px-8 cyber-button neon-glow animate-neon-flicker">
                   <Mic className="h-6 w-6 mr-2" />
                   Voice Demo
                 </Button>
@@ -87,17 +87,17 @@ const Index = () => {
           </div>
 
           {/* Maria's Story */}
-          <Card className="max-w-4xl mx-auto p-8 bg-card/80 backdrop-blur-sm border-none shadow-xl">
+          <Card className="max-w-4xl mx-auto p-8 bg-card/90 backdrop-blur-sm border-primary/30 shadow-xl neon-glow scan-line">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">
+                <h3 className="text-2xl font-semibold text-primary mb-4 text-glow">
                   Meet Maria - 67, Lives Alone in Mumbai
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-foreground mb-4">
                   "Good morning EcoSync," Maria says each day. Her AI energy butler responds warmly, 
                   optimizing her home's energy while keeping her daughter Priya informed about her wellbeing.
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-foreground">
                   With simple voice commands in Hindi and English, Maria manages her home effortlessly 
                   while saving ₹1,200 monthly and staying connected to her community.
                 </p>
@@ -125,13 +125,13 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background cyber-grid">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4 font-poppins">
+            <h2 className="text-4xl font-bold text-primary mb-4 font-orbitron text-glow">
               Why Families Choose EcoSync Nexus
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-foreground max-w-2xl mx-auto">
               Designed specifically for elderly and specially-abled users with family peace of mind
             </p>
           </div>
@@ -140,12 +140,12 @@ const Index = () => {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <Card key={index} className="p-6 text-center gentle-hover">
-                  <div className={`w-16 h-16 mx-auto mb-4 bg-muted rounded-full flex items-center justify-center`}>
-                    <Icon className={`h-8 w-8 ${benefit.color}`} />
+                <Card key={index} className="p-6 text-center gentle-hover bg-card/80 border-primary/20 backdrop-blur-sm">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-cyberpunk rounded-full flex items-center justify-center neon-glow`}>
+                    <Icon className={`h-8 w-8 text-black`} />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-primary mb-3">{benefit.title}</h3>
+                  <p className="text-foreground">{benefit.description}</p>
                 </Card>
               );
             })}
@@ -154,14 +154,15 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 cyber-grid opacity-30"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6 font-poppins">
+              <h2 className="text-4xl font-bold text-primary mb-6 font-orbitron text-glow">
                 Accessibility-First Design
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-foreground mb-8">
                 Every feature is designed with elderly and specially-abled users in mind, 
                 ensuring technology empowers rather than overwhelms.
               </p>
@@ -175,25 +176,25 @@ const Index = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Card className="p-6 text-center">
-                <div className="text-4xl mb-3">🗣️</div>
-                <h4 className="font-semibold text-foreground mb-2">Voice First</h4>
-                <p className="text-sm text-muted-foreground">Natural speech in 4+ languages</p>
+              <Card className="p-6 text-center gentle-hover bg-card/80 border-primary/20 backdrop-blur-sm">
+                <div className="text-4xl mb-3 animate-hologram">🗣️</div>
+                <h4 className="font-semibold text-primary mb-2">Voice First</h4>
+                <p className="text-sm text-foreground">Natural speech in 4+ languages</p>
               </Card>
-              <Card className="p-6 text-center">
-                <div className="text-4xl mb-3">📱</div>
-                <h4 className="font-semibold text-foreground mb-2">Large UI</h4>
-                <p className="text-sm text-muted-foreground">Easy-to-see buttons & text</p>
+              <Card className="p-6 text-center gentle-hover bg-card/80 border-primary/20 backdrop-blur-sm">
+                <div className="text-4xl mb-3 animate-hologram">📱</div>
+                <h4 className="font-semibold text-primary mb-2">Large UI</h4>
+                <p className="text-sm text-foreground">Easy-to-see buttons & text</p>
               </Card>
-              <Card className="p-6 text-center">
-                <div className="text-4xl mb-3">🏠</div>
-                <h4 className="font-semibold text-foreground mb-2">Auto Safety</h4>
-                <p className="text-sm text-muted-foreground">24/7 monitoring & alerts</p>
+              <Card className="p-6 text-center gentle-hover bg-card/80 border-primary/20 backdrop-blur-sm">
+                <div className="text-4xl mb-3 animate-hologram">🏠</div>
+                <h4 className="font-semibold text-primary mb-2">Auto Safety</h4>
+                <p className="text-sm text-foreground">24/7 monitoring & alerts</p>
               </Card>
-              <Card className="p-6 text-center">
-                <div className="text-4xl mb-3">👨‍👩‍👧‍👦</div>
-                <h4 className="font-semibold text-foreground mb-2">Family Link</h4>
-                <p className="text-sm text-muted-foreground">Real-time connection</p>
+              <Card className="p-6 text-center gentle-hover bg-card/80 border-primary/20 backdrop-blur-sm">
+                <div className="text-4xl mb-3 animate-hologram">👨‍👩‍👧‍👦</div>
+                <h4 className="font-semibold text-primary mb-2">Family Link</h4>
+                <p className="text-sm text-foreground">Real-time connection</p>
               </Card>
             </div>
           </div>
@@ -201,21 +202,21 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background cyber-grid">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4 font-poppins">
+            <h2 className="text-4xl font-bold text-primary mb-4 font-orbitron text-glow">
               Real Stories, Real Impact
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-8 gentle-hover">
+              <Card key={index} className="p-8 gentle-hover bg-card/80 border-primary/20 backdrop-blur-sm scan-line">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl">{testimonial.avatar}</div>
+                  <div className="text-4xl animate-hologram">{testimonial.avatar}</div>
                   <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.age}</p>
+                    <h4 className="font-semibold text-primary">{testimonial.name}</h4>
+                    <p className="text-sm text-foreground">{testimonial.age}</p>
                   </div>
                 </div>
                 <blockquote className="text-lg text-foreground italic">
@@ -228,9 +229,10 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4 font-poppins">
+      <section className="py-20 bg-gradient-cyberpunk text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 cyber-grid opacity-20"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-4 font-orbitron text-glow animate-neon-flicker">
             Ready to Transform Your Energy Experience?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
@@ -238,13 +240,13 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/dashboard">
-              <Button variant="secondary" size="xl" className="text-lg px-8">
+              <Button variant="secondary" size="xl" className="text-lg px-8 cyber-button neon-glow">
                 <Zap className="h-6 w-6 mr-2" />
                 Explore Dashboard
               </Button>
             </Link>
             <Link to="/family">
-              <Button variant="outline" size="xl" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button variant="outline" size="xl" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary cyber-button">
                 <Users className="h-6 w-6 mr-2" />
                 Family Features
               </Button>

@@ -21,6 +21,8 @@ export default {
 			fontFamily: {
 				'inter': ['Inter', 'system-ui', 'sans-serif'],
 				'poppins': ['Poppins', 'system-ui', 'sans-serif'],
+				'orbitron': ['Orbitron', 'monospace'],
+				'rajdhani': ['Rajdhani', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -82,6 +84,7 @@ export default {
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-energy': 'var(--gradient-energy)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-cyberpunk': 'var(--gradient-cyberpunk)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -129,6 +132,46 @@ export default {
 				'gentle-bounce': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-4px)' }
+				},
+				'scan-line': {
+					'0%': { left: '-100%' },
+					'100%': { left: '100%' }
+				},
+				'neon-flicker': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'cyber-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px hsl(var(--primary) / 0.5), 0 0 10px hsl(var(--primary) / 0.4), 0 0 15px hsl(var(--primary) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 10px hsl(var(--primary) / 0.7), 0 0 20px hsl(var(--primary) / 0.6), 0 0 30px hsl(var(--primary) / 0.5)'
+					}
+				},
+				'data-stream': {
+					'0%': { transform: 'translateY(-100%)', opacity: '0' },
+					'10%': { opacity: '1' },
+					'90%': { opacity: '1' },
+					'100%': { transform: 'translateY(100vh)', opacity: '0' }
+				},
+				'hologram': {
+					'0%, 100%': { 
+						transform: 'translateY(0px)',
+						filter: 'hue-rotate(0deg)'
+					},
+					'25%': { 
+						transform: 'translateY(-2px)',
+						filter: 'hue-rotate(90deg)'
+					},
+					'50%': { 
+						transform: 'translateY(0px)',
+						filter: 'hue-rotate(180deg)'
+					},
+					'75%': { 
+						transform: 'translateY(2px)',
+						filter: 'hue-rotate(270deg)'
+					}
 				}
 			},
 			animation: {
@@ -138,7 +181,12 @@ export default {
 				'voice-wave': 'voice-wave 2s ease-in-out infinite',
 				'energy-flow': 'energy-flow 3s ease-in-out infinite',
 				'savings-pulse': 'savings-pulse 2s ease-in-out infinite',
-				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite'
+				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite',
+				'scan-line': 'scan-line 3s linear infinite',
+				'neon-flicker': 'neon-flicker 2s ease-in-out infinite',
+				'cyber-glow': 'cyber-glow 2s ease-in-out infinite',
+				'data-stream': 'data-stream 4s linear infinite',
+				'hologram': 'hologram 4s ease-in-out infinite'
 			},
 			spacing: {
 				'touch': '44px',
