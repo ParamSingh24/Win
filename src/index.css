@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 /* EcoSync Nexus Design System - Accessibility-First Energy Management */
 
@@ -320,6 +320,44 @@
       transform: translateY(2px);
       filter: hue-rotate(270deg);
     }
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Earth specific animations */
+  .earth-spin {
+    animation: spin 20s linear infinite;
+  }
+  
+  .earth-glow {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.5),
+      inset 0 0 20px rgba(0, 255, 255, 0.2),
+      0 0 50px rgba(0, 255, 255, 0.1);
+  }
+  
+  /* Smooth landing page transitions */
+  .landing-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .landing-fade {
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-10px) translateX(5px); }
+    50% { transform: translateY(0px) translateX(10px); }
+    75% { transform: translateY(10px) translateX(5px); }
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
   }
   
   /* Accessibility utilities */

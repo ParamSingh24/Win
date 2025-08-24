@@ -186,7 +186,8 @@ export default {
 				'neon-flicker': 'neon-flicker 2s ease-in-out infinite',
 				'cyber-glow': 'cyber-glow 2s ease-in-out infinite',
 				'data-stream': 'data-stream 4s linear infinite',
-				'hologram': 'hologram 4s ease-in-out infinite'
+				'hologram': 'hologram 4s ease-in-out infinite',
+				'spin-slow': 'spin 20s linear infinite'
 			},
 			spacing: {
 				'touch': '44px',
